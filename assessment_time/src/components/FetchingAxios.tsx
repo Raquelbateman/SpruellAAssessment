@@ -93,7 +93,7 @@ const startEdit = (id: number, title: string) => {
  {editId === todo.id ? <input type="text" value={editText} onChange={(e) => setEditText(e.target.value)} //update edited text state
 }
 
-onKeyDown = (e) =>{
+onKeyDown = {(e) => {
     if (e.key ==="Enter"){
         updateTodo(todo.id); //update todo with key press
     } else if (e.key === "Escape"){
@@ -101,10 +101,8 @@ onKeyDown = (e) =>{
     }
 }
 
-){
-
-    
- }}
+<button title="Edit Task"></button>
+<button title="Delete Task"></button>
 
 
 
