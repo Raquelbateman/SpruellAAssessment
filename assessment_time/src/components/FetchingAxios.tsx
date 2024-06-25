@@ -101,8 +101,8 @@ onKeyDown = {(e) => {
     }
 }
 
-<button title="Edit Task" onClick={}>Edit</button>
-<button title="Delete Task" onClick={}>Delete</button>
+<button title="Edit Task" onClick={() => startEdit(todo.id, todo.title)}>Edit</button>
+<button title="Delete Task" onClick={() => deleteTodo(todo.id)}>Delete</button>
 
 
 
