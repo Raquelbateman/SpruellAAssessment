@@ -101,8 +101,8 @@ onKeyDown = {(e) => {
     }
 }
 
-<button title="Edit Task"></button>
-<button title="Delete Task"></button>
+<button title="Edit Task" onClick={}>Edit</button>
+<button title="Delete Task" onClick={}>Delete</button>
 
 
 
