@@ -84,7 +84,19 @@ const startEdit = (id: number, title: string) => {
  <h1 className="text-center">ToDo List</h1>
  <input type="text" placeholder="enter task" value={input} onChange={(e.target.value)}/>
  <button className="btn btn-success" title="Add new task" onClick={addTodo}>Add</button>
- 
+ {error && <p className="text-danger">{error}</p>}
+ {todos.map((todo) =>
+ <li key={todo.id}></li>
+
+ <input type="checkbox" checked={todo.complete} onChange={() => toggleComplete(todo.id)}/>
+
+ {editId === todo.id ? <input type="text" value={editText} onChange={(e) => setEditText(e.target.value)}
+    "}
+
+){
+
+    
+ }}
 
 
 
