@@ -44,7 +44,7 @@ const FetchingAxios = () => {
     // function to delete
     const deleteTodo = (id:number) => {
         //filter the existing list and only keep items where the id doesnt match
-        const updatedTodos = todos.filter(todo) => todo.id !===id);
+        const updatedTodos = todos.filter(todo => todo.id !===id);
         setTodos(updatedTodos);
 
     };
