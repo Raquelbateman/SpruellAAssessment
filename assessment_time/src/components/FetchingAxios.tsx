@@ -5,7 +5,7 @@ interface TodoItem {
     userId: number;
     id: number;
     title:string;
-    completed: true;
+    completed: false;
   }
 
 const FetchingAxios = () => {
@@ -35,16 +35,16 @@ const FetchingAxios = () => {
                 userId:1,
                 id:Math.floor(Math.random()),
                 title:input,
-                completed:false
+                completed:false,
             };
             //update the todo state by adding a new item to the existing list
-            setTodos([...todos,newTodo]);
+            setTodos([...todo,newTodo]);
             setInput("");
         };
     // function to delete
     const deleteTodo = (id:number) => {
         //filter the existing list and only keep items where the id doesnt match
-        const updatedTodos = todos.filter(todo => todo.id !===id);
+        const updatedTodos = todos.filter(todo => todo.id !== id);
         setTodos(updatedTodos);
 
     };
