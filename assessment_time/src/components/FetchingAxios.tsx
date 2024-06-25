@@ -90,8 +90,16 @@ const startEdit = (id: number, title: string) => {
 
  <input type="checkbox" checked={todo.complete} onChange={() => toggleComplete(todo.id)}/>
 
- {editId === todo.id ? <input type="text" value={editText} onChange={(e) => setEditText(e.target.value)}
-    "}
+ {editId === todo.id ? <input type="text" value={editText} onChange={(e) => setEditText(e.target.value)} //update edited text state
+}
+
+onKeyDown = (e) =>{
+    if (e.key ==="Enter"){
+        updateTodo(todo.id); //update todo with key press
+    } else if (e.key === "Escape"){
+        stopEdit(); //stops editing when escape is pressed
+    }
+}
 
 ){
 
